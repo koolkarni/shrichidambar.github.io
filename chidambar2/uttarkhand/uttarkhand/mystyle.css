@@ -1,0 +1,48 @@
+
+#page-container {
+		 width: 760px;
+		 margin: auto;
+		}
+#nav {
+	 text-align: center;	
+	 background:orange;
+	 height: 30px;
+		}
+#footer {
+	 clear: both;
+	 text-align: center;
+	 height: 66px;
+		}
+#sidebar-a {
+	    float: left;
+	    width:100px;
+	    background: WHITE; 
+	   }
+#sidebar-b {
+	    float: right;
+	    width: 100px;
+            background: green;   
+	   }
+	
+#content {
+	    margin-left: 100px;
+	    margin-right: 100px;
+                     background: yellow;   
+	   }
+
+.navcontent
+  {
+    border:1px solid #FFFFE6; font-family: "Arial";
+    font-size: 12px;
+    text-align: left;
+    letter-spacing: 1px
+  }
+
+  A:hover   { color:white; font-weight:800;}
+ .A   {
+    text-decoration:none;
+    font-weight:600;
+    color: brown;
+	}
+body {color: "#EEAD0E"; background: #FFE4C4;}
+

@@ -1,0 +1,101 @@
+
+#page-container {
+		 width: auto;
+		 margin: auto;
+		text-align: left;
+
+
+			}
+#nav {  	
+	 text-align: center;
+	 background: #FFE4C4; 
+	 height: 33px;
+		}
+#footer {
+	font: 11pt arial, verdana, geneva, lucida, 'lucida grande', helvetica, sans-serif;
+	text-decoration:none;
+	text-align: center;
+	height: 66px;
+		}
+
+#sidebar-a 	{
+
+	 font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	text-decoration:none;
+	color:  red;
+	
+	
+	padding: 2px;
+	border:1px solid RED;
+
+	    float: left;
+	    width:20%;
+	    background: #FFD697;
+	   }
+#sidebar-b {
+	    float: right;
+	    width: 10%;
+		color:  red;             
+		}
+	
+#content { 
+	
+	
+	font: 11pt arial, verdana, geneva, lucida, 'lucida grande', helvetica, sans-serif;
+	text-decoration:none;
+	color: #800000;
+	    
+	background: #FFFFE6;
+            	   }
+
+.navcontent
+	{
+	border:1px solid #FFFFE6; 
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	
+        text-align: center;
+	letter-spacing: 1px;
+		}
+
+  A:hover   { font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+		color: C100C1; }
+
+ .A   { font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+    	text-decoration:none;
+	color:  #22229C;
+	}
+
+
+
+ .H  { font: 11pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	text-decoration:none;
+	color: #FF0000;
+	}
+
+
+.list{
+padding-center: 1px;
+}
+
+.list a{
+margin-left: -3px;
+padding:  1px;
+font-size: 10pt;
+display: block;
+color: #22229C;
+text-decoration: none;
+
+border-bottom: 1px solid #ececec;
+}
+
+body {color: "red"; background: #FFFFE6;
+	font: 11pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	text-align: center;
+	
+	}
+
+
+
+
+
+

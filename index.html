@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>Welcome to ShriChidambarswami.org</title>
+
+<meta name="keywords" content="chidambar, shrichidambar, shivchidambar, chidambarmahaswami, guruchidambar,chidambarguru, shrishivchidambar, sadguru, shivguru, chidambara, gurudeva, dattatreya, shiva,
+shankara, vishnu, mahavishnu, devine, mahalaxmi, laxmi, paravti, amba, brahma, saraswati, narayana, kalki, shrikrishna, siddha, chidambarswami, chidambarmahaswami, panduranga, vitthal, rama, babhulgaon, godavari, ganga,
+murugod, kengeri, maruti, garuda, shesha, om, mauli, balram, parashuram, rajaram, vithabai, yadyna, swamisamarha, somayag, mata, mother, father, shrividya, Kulkarni, navanath, muktabai, bhatt, bhutt, malhari, martand, dixit, hipparagi, devar hipparagi,
+mallaya, mallikarjuna, lord shiva, mhalasa, mhalasakant, banshankari, badami, bijapur, pattadkal, chalukya, belgaum,  sholapur, god, shivling, linga, bharat, india,  chidambaram, himalaya, krishna, aurangabad, banaras, kashi, vishwanath, purushottam, vasant, datta, dattaguru,
+universe, world, state, ahilya, droupadi, sita, tara, mandodari, vedas, upanishad, shruti, puran, shastra, science, uadi, horti,chidambar dixit, gothe,salvation, moksha, life, mantra, gayatri, worship, rishi, almighty, creator, creation, Jesus, Mosiac, Mahavir, holy, bank, Hindu, honorable,
+Ayurved, peacock, lion, cow, banyan tree, lotus, shri, shree, Arya, Samskrit, sea, sky, micro, macro, nano, friend, fish, east, west, south, north, eagle, diamond, red, green, blue, white, honey, Tuljapur, Akkalkot, wide, Buddha, incranation, King, big bang, dirve, human, republic, gender, year, day,
+water, fire, space, earth, air, vatican, zero, infinte, Shrinivas, Balaji, Ajmer, Indian, Astrology, teacher, pass, love, beauty, attraction, eyes, heart, son, star, bilva, bilv, mountain, milk, global, excuse, kind, truth, bell, sitar, flute, violin, Mr., Sudha, Koushik, Shriya, Vasant, Bapu, Joshi, 
+Deshpande, Birajdar, Patil, Gauda, Shankaracharya, Kanchi, Belgaon, Gondawale, Babhulgaon, Raja Ram, kumbhamela, jet, Hubli, Indi, Pune, ny,nj, federal, sys, soft, jupiter ">
+</head>
+
+
+<body bgcolor="FB5F13" text="#ffffff">
+<script language="JavaScript";>
+
+/*
+Effect of Flowers and bilva leaves 
+*/
+  
+//Configure below to change URL path to the bilv image 
+var bilv="images/bilv.gif"
+// Configure below to change number of bilv to render 
+var no = 8;
+
+var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+var ie4up = (document.all) ? 1 : 0;
+var Firefox = (document.all) ? 1 : 0;
+
+  var dx, xp, yp;    // coordinate and position variables
+  var am, stx, sty;  // amplitude and step variables
+  var i, doc_width = 1024, doc_height = 768;
+  
+  if (ns4up) {
+    doc_width = self.innerWidth;
+    doc_height = self.innerHeight;
+  } else if (ie4up) {
+    doc_width = document.body.clientWidth;
+    doc_height = document.body.clientHeight;
+  }
+
+
+
+  dx = new Array();
+  xp = new Array();
+  yp = new Array();
+  am = new Array();
+  stx = new Array();
+  sty = new Array();
+  
+  for (i = 0; i < no; ++ i) {  
+    dx[i] = 0;                        // set coordinate variables
+    xp[i] = Math.random()*(doc_width-50);  // set position variables
+    yp[i] = Math.random()*doc_height;
+    am[i] = Math.random()*20;         // set amplitude variables
+    stx[i] = 0.02 + Math.random()/10; // set step variables
+    sty[i] = 0.7 + Math.random();     // set step variables
+    if (ns4up) {                      // set layers
+      if (i == 0) {
+        document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><img src='"+bilv+"' border=\"0\"></a></layer>");
+      } else {
+        document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><img src='"+bilv+"' border=\"0\"></layer>");
+      }
+    } else if (ie4up) {
+      if (i == 0) {
+        document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><img src='"+bilv+"' border=\"0\"></a></div>");
+      }
+
+
+
+ else {
+        document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><img src='"+bilv+"' border=\"0\"></div>");
+      }
+    }
+  }
+  
+  function bilvNS() {  // Netscape main animation function
+    for (i = 0; i < no; ++ i) {  // iterate for every dot
+      yp[i] += sty[i];
+      if (yp[i] > doc_height-50) {
+        xp[i] = Math.random()*(doc_width-am[i]-30);
+        yp[i] = 0;
+        stx[i] = 0.02 + Math.random()/10;
+        sty[i] = 0.7 + Math.random();
+        doc_width = self.innerWidth;
+        doc_height = self.innerHeight;
+      }
+      dx[i] += stx[i];
+      document.layers["dot"+i].top = yp[i];
+      document.layers["dot"+i].left = xp[i] + am[i]*Math.sin(dx[i]);
+    }
+    setTimeout("bilvNS()", 10);
+  }
+
+  function bilvIE() {  // IE main animation function
+    for (i = 0; i < no; ++ i) {  // iterate for every dot
+      yp[i] += sty[i];
+      if (yp[i] > doc_height-50) {
+        xp[i] = Math.random()*(doc_width-am[i]-30);
+        yp[i] = 0;
+        stx[i] = 0.02 + Math.random()/09;
+        sty[i] = 0.7 + Math.random();
+        doc_width = document.body.clientWidth;
+        doc_height = document.body.clientHeight;
+      }
+      dx[i] += stx[i];
+      document.all["dot"+i].style.pixelTop = yp[i];
+      document.all["dot"+i].style.pixelLeft = xp[i] + am[i]*Math.sin(dx[i]);
+    }
+    setTimeout("bilvIE()", 03);
+  }
+
+
+  if (ns4up) {
+    bilvNS();
+  } else if (ie4up) {
+    bilvIE();
+ 
+  }
+</script>
+
+<p class=MsoNormal align=center style='text-align:center'><a
+href="homepage.html"><span style='text-decoration:none;text-underline:none'><img
+ src="images/ch21.jpg" border=0 width =684 height =549 id="_x0000_i1026"></span></a></p>
+ 
+</body>
+</html>
+<!--08:53 22-01-2009-->
